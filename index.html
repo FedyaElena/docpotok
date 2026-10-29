@@ -22,6 +22,8 @@ a{color:#0E1A2B}a:hover{color:#B83C0A}
 .dp-input{width:100%;box-sizing:border-box;min-height:48px;padding:0 14px;border:1px solid #B9C3CC;border-radius:6px;font:inherit;font-size:16px;background:#FFFFFF;color:#0E1A2B}
 input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 .dp-nav a{text-decoration:none}
+.dp-foot{color:#C3CED9}.dp-foot:hover{color:#FFFFFF}
+#lead-form-slot iframe{width:100%;border:0;display:block}
 @media (max-width:760px){.dp-navlinks{display:none !important}}
 </style>
 <style>html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
@@ -47,7 +49,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <a href="#price">Стоимость</a>
 <a href="#faq">Вопросы</a>
 </nav>
-<a class="dp-btn" href="#pilot" style="background: #0E1A2B; color: #FFFFFF; min-height: 44px; font-size: 15px">Запросить пилот</a>
+<a class="dp-btn" href="#pilot" data-goal="cta_nav" style="background: #0E1A2B; color: #FFFFFF; min-height: 44px; font-size: 15px">Запросить пилот</a>
 </div>
 </header>
 
@@ -59,8 +61,8 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <h1 style="font-family: 'Unbounded', 'Onest', sans-serif; font-weight: 700; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.08; letter-spacing: -0.02em; margin: 0; text-wrap: balance">Счета перевозчиков – в себестоимость без ошибок разноски</h1>
 <p style="margin: 0; font-size: 19px; color: #3E4B5A; max-width: 58ch">ДокПоток читает счета перевозчиков, складов и терминалов, распределяет затраты по контейнерам и перевозкам по вашим правилам и готовит проводки для 1С. Работает на вашем сервере: коммерческие данные не покидают контур компании.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a class="dp-btn" href="#pilot" style="background: #C2410C; color: #FFFFFF">Запустить пилот за 10 000 ₽</a>
-<a class="dp-btn" href="#calc" style="background: transparent; color: #0E1A2B; border: 1.5px solid #0E1A2B">Посчитать, сколько под риском</a>
+<a class="dp-btn" href="#pilot" data-goal="cta_hero" style="background: #C2410C; color: #FFFFFF">Запустить пилот за 10 000 ₽</a>
+<a class="dp-btn" href="#calc" data-goal="cta_calc" style="background: transparent; color: #0E1A2B; border: 1.5px solid #0E1A2B">Посчитать, сколько под риском</a>
 </div>
 <ul style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #3E4B5A">
 <li style="display: flex; gap: 8px; align-items: center"><span aria-hidden="true" style="width: 8px; height: 8px; background: #D9480F"></span>1 месяц, 100 ваших счетов</li>
@@ -173,7 +175,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <span style="font-size: 15px; color: #B9C6D3">Годовая лицензия от этого эффекта</span>
 <span class="dp-mono" style="font-size: 26px; font-weight: 600"><span id="o-share">3,5</span>%</span>
 </div>
-<a class="dp-btn" href="#pilot" style="background: #C2410C; color: #FFFFFF; align-self: flex-start">Проверить на своих счетах</a>
+<a class="dp-btn" href="#pilot" data-goal="calc_cta" style="background: #C2410C; color: #FFFFFF; align-self: flex-start">Проверить на своих счетах</a>
 </div>
 </div>
 </section>
@@ -285,7 +287,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <li>Настройка правил разноски под ваш учет</li>
 <li>Отчет: точность, время на счет, доля правок, ошибки в рублях</li>
 </ul>
-<a class="dp-btn" href="#pilot" style="background: #C2410C; color: #FFFFFF; margin-top: auto; align-self: flex-start">Записаться на пилот</a>
+<a class="dp-btn" href="#pilot" data-goal="cta_price" style="background: #C2410C; color: #FFFFFF; margin-top: auto; align-self: flex-start">Записаться на пилот</a>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #D5DBE0; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 6px">
@@ -350,29 +352,34 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <h2 class="dp-h2">Обсудим пилот на ваших счетах</h2>
 <p style="margin: 0; color: #C3CED9; font-size: 18px">Оставьте контакты. Свяжемся в течение рабочего дня, уточним объем документов и правила разноски.</p>
-<div class="dp-mono" style="display: flex; flex-direction: column; gap: 6px; font-size: 15px; color: #DCE3EA; padding-top: 12px">
-<span>[телефон]</span>
-<span>[e-mail]</span>
-<span>[Telegram]</span>
+<p style="margin: 0; color: #C3CED9; font-size: 16px; padding-top: 8px">Или напишите нам: <span class="dp-mono" style="color: #FFFFFF; user-select: all">fedianina.ea@phystech.edu</span></p>
 </div>
+<div id="lead-form-slot" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; color: #0E1A2B; border-radius: 10px; padding: 12px; box-sizing: border-box">
+<p id="lead-form-fallback" style="margin: 20px; color: #3E4B5A; font-size: 16px">Форма заявки загружается. Если она не появилась, напишите на <span class="dp-mono" style="user-select: all">fedianina.ea@phystech.edu</span>.</p>
 </div>
-<form id="lead-form" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; color: #0E1A2B; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-name" style="font-weight: 600; font-size: 15px">Имя</label><input id="f-name" class="dp-input" type="text" autocomplete="name"></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-company" style="font-weight: 600; font-size: 15px">Компания</label><input id="f-company" class="dp-input" type="text" autocomplete="organization"></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-contact" style="font-weight: 600; font-size: 15px">Телефон или e-mail</label><input id="f-contact" class="dp-input" type="text"></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-volume" style="font-weight: 600; font-size: 15px">Сколько логистических счетов в месяц</label><input id="f-volume" class="dp-input" type="text" placeholder="например, 200"></div>
-<div style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #3E4B5A"><input id="f-consent" type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; accent-color: #D9480F"><label for="f-consent">Согласен на обработку персональных данных в соответствии с <a href="#privacy">политикой</a></label></div>
-<button type="submit" class="dp-btn" style="background: #C2410C; color: #FFFFFF; border: 0; cursor: pointer; font-family: inherit">Отправить заявку</button>
-</form>
 </div>
 </section>
 
-<footer id="privacy" style="background: #0A1320; color: #9FB0C1; padding-block: 28px; font-size: 14px">
+<footer style="background: #0A1320; color: #9FB0C1; padding-block: 28px; font-size: 14px">
 <div class="dp-wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 32px">
-<span>© 2026 ДокПоток · [ИП ФИО, ИНН]</span>
-<span>[Политика обработки персональных данных]</span>
+<span>© 2026 ДокПоток · Федянина Елена Александровна · <span style="user-select: all">fedianina.ea@phystech.edu</span></span>
+<span style="display: flex; flex-wrap: wrap; gap: 8px 20px">
+<a class="dp-foot" href="privacy.html">Политика обработки персональных данных</a>
+<a class="dp-foot" href="consent.html">Согласие на обработку персональных данных</a>
+<button type="button" id="cookie-settings" class="dp-foot" style="background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline">Настройки cookie</button>
+</span>
 </div>
 </footer>
+
+<div id="cookie-banner" role="dialog" aria-label="Использование cookie" hidden style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; padding: 0 max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); pointer-events: none">
+<div style="max-width: 760px; margin: 0 auto; background: #FFFFFF; color: #0E1A2B; border: 1px solid #D5DBE0; border-radius: 10px; box-shadow: 0 16px 40px -16px rgba(14,26,43,0.45); padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 14px 20px; align-items: center; pointer-events: auto">
+<p style="margin: 0; flex: 1 1 360px; min-width: 0; font-size: 15px; line-height: 1.5">Мы используем cookie и Яндекс Метрику, чтобы понимать, как посетители пользуются сайтом. Метрика включится только с вашего согласия. Подробнее – в <a href="privacy.html">политике обработки персональных данных</a>.</p>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<button type="button" id="cookie-accept" class="dp-btn" style="background: #C2410C; color: #FFFFFF; border: 0; cursor: pointer; font-family: inherit; min-height: 44px">Принять</button>
+<button type="button" id="cookie-decline" class="dp-btn" style="background: transparent; color: #0E1A2B; border: 1.5px solid #0E1A2B; cursor: pointer; font-family: inherit; min-height: 44px">Отказаться</button>
+</div>
+</div>
+</div>
 
 </div>
 <script>
@@ -388,8 +395,62 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
     document.getElementById('o-share').textContent=fmt(saved>0?0.227/saved*100:0);
   }
   s.addEventListener('input',upd); e.addEventListener('input',upd); upd();
-  // TODO: подключить отправку заявки (Яндекс Формы, Telegram-бот или скрипт хостинга)
-  document.getElementById('lead-form').addEventListener('submit',function(ev){ev.preventDefault();});
+
+  /* ===== НАСТРОЙКИ: впишите свои значения ===== */
+  var YA_FORM_ID = '6ae36f552c4f89d756916d2e';   // ID Яндекс Формы из ссылки forms.yandex.ru/u/<ID>/
+  var YM_ID = 0;         // номер счетчика Яндекс Метрики, например 98765432
+  /* ============================================= */
+
+  // Яндекс Форма в блоке заявки
+  if (YA_FORM_ID) {
+    var slot = document.getElementById('lead-form-slot');
+    var fr = document.createElement('iframe');
+    fr.src = 'https://forms.yandex.ru/u/' + YA_FORM_ID + '/?iframe=1';
+    fr.name = 'ya-form-' + YA_FORM_ID;
+    fr.title = 'Заявка на пилот ДокПоток';
+    fr.setAttribute('frameborder', '0');
+    fr.style.minHeight = '640px';
+    slot.innerHTML = '';
+    slot.appendChild(fr);
+    var em = document.createElement('script');
+    em.src = 'https://forms.yandex.ru/_static/embed.js';
+    document.body.appendChild(em);
+  }
+
+  // Cookie и Яндекс Метрика
+  var KEY = 'dp_cookie_consent';
+  function getC(){ try { return localStorage.getItem(KEY); } catch(_) { return null; } }
+  function setC(v){ try { localStorage.setItem(KEY, v); } catch(_) {} }
+  var banner = document.getElementById('cookie-banner');
+  var ymLoaded = false;
+  function loadYM(){
+    if (ymLoaded || !YM_ID) return; ymLoaded = true;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)})
+    (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    ym(YM_ID, 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true });
+  }
+  function goal(name){ if (ymLoaded && window.ym) ym(YM_ID, 'reachGoal', name); }
+  var c = getC();
+  if (c === 'yes') loadYM(); else if (c !== 'no') banner.hidden = false;
+  document.getElementById('cookie-accept').addEventListener('click', function(){ setC('yes'); banner.hidden = true; loadYM(); });
+  document.getElementById('cookie-decline').addEventListener('click', function(){ setC('no'); banner.hidden = true; });
+  document.getElementById('cookie-settings').addEventListener('click', function(){ banner.hidden = false; });
+
+  // Цели Метрики
+  document.querySelectorAll('[data-goal]').forEach(function(el){
+    el.addEventListener('click', function(){ goal(el.getAttribute('data-goal')); });
+  });
+  var calcDone = false;
+  function calcGoal(){ if (!calcDone) { calcDone = true; goal('calc_used'); } }
+  s.addEventListener('change', calcGoal); e.addEventListener('change', calcGoal);
+  if ('IntersectionObserver' in window) {
+    [['price','scroll_price'],['pilot','scroll_form']].forEach(function(p){
+      var el = document.getElementById(p[0]); if (!el) return;
+      var io = new IntersectionObserver(function(en){ if (en[0].isIntersecting) { goal(p[1]); io.disconnect(); } }, { threshold: 0.3 });
+      io.observe(el);
+    });
+  }
 })();
 </script>
 </body>
