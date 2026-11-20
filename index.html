@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ДокПоток – учет логистических расходов в себестоимости без ошибок</title>
 <meta name="description" content="ДокПоток читает счета перевозчиков, распределяет затраты по контейнерам по вашим правилам и готовит проводки для 1С. Работает на вашем сервере, данные не покидают контур компании.">
-<meta property="og:title" content="ДокПоток – счета перевозчиков в себестоимость без ошибок разноски">
-<meta property="og:description" content="On-premise решение для импортеров: извлечение данных из счетов, разноска затрат по контейнерам, проводки для 1С. Пилот – 10 000 ₽.">
+<meta property="og:title" content="ДокПоток – счета перевозчиков в себестоимость без ошибок и потерь">
+<meta property="og:description" content="On-premise решение для импортеров: извлечение данных из счетов, распределение затрат по контейнерам, проводки для 1С. Пилот – 10 000 ₽.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Onest:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
@@ -58,11 +58,11 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div class="dp-wrap" style="display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
 <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
 <div class="dp-eyebrow" style="color: #B83C0A">On-premise для импортеров непродовольственных товаров</div>
-<h1 style="font-family: 'Unbounded', 'Onest', sans-serif; font-weight: 700; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.08; letter-spacing: -0.02em; margin: 0; text-wrap: balance">Счета перевозчиков – в себестоимость без ошибок разноски</h1>
+<h1 style="font-family: 'Unbounded', 'Onest', sans-serif; font-weight: 700; font-size: clamp(34px, 4.6vw, 58px); line-height: 1.08; letter-spacing: -0.02em; margin: 0; text-wrap: balance">Счета перевозчиков – в себестоимость без ошибок и потерь</h1>
 <p style="margin: 0; font-size: 19px; color: #3E4B5A; max-width: 58ch">ДокПоток читает счета перевозчиков, складов и терминалов, распределяет затраты по контейнерам и перевозкам по вашим правилам и готовит проводки для 1С. Работает на вашем сервере: коммерческие данные не покидают контур компании.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a class="dp-btn" href="#pilot" data-goal="cta_hero" style="background: #C2410C; color: #FFFFFF">Запустить пилот за 10 000 ₽</a>
-<a class="dp-btn" href="#calc" data-goal="cta_calc" style="background: transparent; color: #0E1A2B; border: 1.5px solid #0E1A2B">Посчитать, сколько под риском</a>
+<a class="dp-btn" href="#calc" data-goal="cta_calc" style="background: transparent; color: #0E1A2B; border: 1.5px solid #0E1A2B">Посчитать, сколько теряете</a>
 </div>
 <ul style="list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #3E4B5A">
 <li style="display: flex; gap: 8px; align-items: center"><span aria-hidden="true" style="width: 8px; height: 8px; background: #D9480F"></span>1 месяц, 100 ваших счетов</li>
@@ -102,7 +102,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 </div>
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 20px; border-top: 1px solid #E3E8EC; background: #F7F9F8; border-radius: 0 0 10px 10px">
 <span class="dp-mono" style="font-size: 13px; color: #3E4B5A">provodki_0412.xlsx → 1С</span>
-<span style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 6px; background: #0E1A2B; color: #FFFFFF; font-size: 14px; font-weight: 600">Подтвердить</span>
+<a href="#pilot" data-goal="cta_card" style="display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 6px; background: #0E1A2B; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none">Подтвердить</a>
 </div>
 </div>
 </div>
@@ -112,13 +112,13 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <section id="problem" style="background: #FFFFFF; padding-block: 88px; border-top: 1px solid #D5DBE0; border-bottom: 1px solid #D5DBE0">
 <div class="dp-wrap" style="display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
-<h2 class="dp-h2">Ошибка в одном поле меняет цену товара</h2>
+<h2 class="dp-h2">Одна ошибка в поле – и партия продана в убыток</h2>
 <p style="margin: 0; color: #3E4B5A; font-size: 18px">Логистика – до трети себестоимости импортного товара. Когда счет переносят в Excel и 1С вручную, перепутанная валюта или ставка НДС уходит дальше по цепочке, и ее замечают уже в марже.</p>
 </div>
 <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px">
-<li style="padding: 22px; background: #F2F4F3; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #B83C0A">01</span><span style="font-weight: 600; font-size: 18px">Перепутали валюту или НДС при вводе счета</span></li>
-<li style="padding: 22px; background: #F2F4F3; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #B83C0A">02</span><span style="font-weight: 600; font-size: 18px">Себестоимость партии искажена</span></li>
-<li style="padding: 22px; background: #0E1A2B; color: #FFFFFF; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #FF9A62">03</span><span style="font-weight: 600; font-size: 18px">Товар продают в убыток или берут лишний кредит</span></li>
+<li style="padding: 22px; background: #F2F4F3; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #B83C0A">01</span><span style="font-weight: 600; font-size: 18px">Перепутали валюту или ставку НДС</span><span style="font-size: 15px; color: #3E4B5A">Евро вместо рублей — ошибка в 100 раз. НДС 22% вместо 10% — в 2 раза.</span></li>
+<li style="padding: 22px; background: #F2F4F3; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #B83C0A">02</span><span style="font-weight: 600; font-size: 18px">Себестоимость партии посчитана неверно</span><span style="font-size: 15px; color: #3E4B5A">Цена продажи считается от неверной базы — ошибка уходит в маржу.</span></li>
+<li style="padding: 22px; background: #0E1A2B; color: #FFFFFF; border-radius: 8px; display: flex; flex-direction: column; gap: 8px"><span class="dp-mono" style="font-size: 13px; color: #FF9A62">03</span><span style="font-weight: 600; font-size: 18px">Товар продан в убыток</span><span style="font-size: 15px; color: #DCE3EA">На партии в 100 млн ₽ не заработали 1,4 млн ₽ — или сработали в минус.</span></li>
 </ol>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; padding-top: 8px">
 <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #0E1A2B; padding-top: 16px">
@@ -127,7 +127,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #D9480F; padding-top: 16px">
 <span class="dp-mono" style="font-size: clamp(28px, 3vw, 38px); font-weight: 600; color: #B83C0A">0,5–1,4 млн ₽</span>
-<span style="color: #3E4B5A">себестоимости в месяц искажают ошибки ручной разноски</span>
+<span style="color: #3E4B5A">в месяц теряют из-за ошибок ручного ввода</span>
 </div>
 <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #0E1A2B; padding-top: 16px">
 <span class="dp-mono" style="font-size: clamp(28px, 3vw, 38px); font-weight: 600">15–40 мин</span>
@@ -143,7 +143,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div class="dp-wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; flex-direction: column; gap: 14px">
-<h2 class="dp-h2">Сколько себестоимости под риском у вас</h2>
+<h2 class="dp-h2">Сколько вы теряете на ошибках</h2>
 <p style="margin: 0; color: #3E4B5A">Подвиньте ползунки под свою компанию. Расчет оценочный: фактическую долю ошибок в рублях мы измерим на пилоте на ваших счетах.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
@@ -155,16 +155,16 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 </div>
 <div style="display: flex; flex-direction: column; gap: 8px">
 <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap">
-<label for="calc-err" style="font-weight: 600">Доля сумм с ошибками разноски</label>
+<label for="calc-err" style="font-weight: 600">Доля счетов с ошибками</label>
 <span class="dp-mono" style="font-weight: 600"><span id="o-err">3</span>%</span>
 </div>
 <input id="calc-err" type="range" min="2" max="5" step="0.5" value="3">
-<span style="font-size: 14px; color: #4A5868">При ручной разноске – обычно 2–5% сумм. Цель ДокПотока – не более 1%.</span>
+<span style="font-size: 14px; color: #4A5868">При ручном вводе — обычно 2–5% сумм. Цель ДокПотока — не более 1%.</span>
 </div>
 </div>
 <div style="flex: 1 1 420px; min-width: 0; background: #0E1A2B; color: #FFFFFF; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 4px">
-<span style="font-size: 15px; color: #B9C6D3">Искажено себестоимости за год сейчас</span>
+<span style="font-size: 15px; color: #B9C6D3">Теряете из-за ошибок сейчас, за год</span>
 <span class="dp-mono" style="font-size: clamp(30px, 3.4vw, 44px); font-weight: 600"><span id="o-risk">9,7</span> млн ₽</span>
 </div>
 <div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #2A3A50; padding-top: 20px">
@@ -232,7 +232,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 </div>
 <div style="padding: 24px; background: #0E1A2B; color: #FFFFFF; border-radius: 8px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-weight: 600; color: #FF9A62">ДокПоток</span>
-<span style="color: #DCE3EA; font-size: 16px">Закрывает всю цепочку до проводки, разносит затраты по вашим правилам и работает внутри вашего контура.</span>
+<span style="color: #DCE3EA; font-size: 16px">Закрывает всю цепочку до проводки, распределяет затраты по вашим правилам и работает внутри вашего контура.</span>
 </div>
 </div>
 </div>
@@ -279,12 +279,12 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div style="background: #FFFFFF; border: 2px solid #D9480F; border-radius: 10px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
 <div style="display: flex; flex-direction: column; gap: 6px">
 <span class="dp-eyebrow" style="color: #B83C0A">Шаг 1 · Пилот</span>
-<span class="dp-mono" style="font-size: 40px; font-weight: 600">10 000 ₽</span>
-<span style="color: #3E4B5A">1 месяц</span>
+<span style="display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap"><span style="color: #8796A5; text-decoration: line-through; font-size: 22px">100 000 ₽</span><span class="dp-mono" style="font-size: 40px; font-weight: 600">10 000 ₽</span></span>
+<span style="color: #3E4B5A">1 месяц · скидка 90% на первый пилот</span>
 </div>
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
 <li>Обработка 100 ваших счетов</li>
-<li>Настройка правил разноски под ваш учет</li>
+<li>Настройка правил распределения затрат под ваш учет</li>
 <li>Отчет: точность, время на счет, доля правок, ошибки в рублях</li>
 </ul>
 <a class="dp-btn" href="#pilot" data-goal="cta_price" style="background: #C2410C; color: #FFFFFF; margin-top: auto; align-self: flex-start">Записаться на пилот</a>
@@ -297,7 +297,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 </div>
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px">
 <li>Установка на ваш сервер и внедрение</li>
-<li>Настройка бизнес-правил разноски</li>
+<li>Настройка бизнес-правил распределения затрат</li>
 <li>Поддержка и обновления модели</li>
 <li>Дообучение на правках ваших специалистов</li>
 </ul>
@@ -309,7 +309,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px">
 <div style="display: flex; flex-direction: column; gap: 4px"><span class="dp-mono" style="font-size: 30px; font-weight: 600">в 3–6 раз</span><span style="color: #3E4B5A; font-size: 15px">быстрее обработка счета</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span class="dp-mono" style="font-size: 30px; font-weight: 600">≥ 99%</span><span style="color: #3E4B5A; font-size: 15px">точность данных для учета</span></div>
-<div style="display: flex; flex-direction: column; gap: 4px"><span class="dp-mono" style="font-size: 30px; font-weight: 600">≤ 1%</span><span style="color: #3E4B5A; font-size: 15px">сумм с ошибками разноски</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span class="dp-mono" style="font-size: 30px; font-weight: 600">≤ 1%</span><span style="color: #3E4B5A; font-size: 15px">сумм с ошибками распределения</span></div>
 <div style="display: flex; flex-direction: column; gap: 4px"><span class="dp-mono" style="font-size: 30px; font-weight: 600">5 кликов</span><span style="color: #3E4B5A; font-size: 15px">на простой счет вместо 17</span></div>
 </div>
 </div>
@@ -340,7 +340,7 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Какие документы обрабатывает?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">Счета перевозчиков, складов и терминалов в PDF и сканах, в том числе на разных языках.</p></div>
 <div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Как данные попадут в 1С?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">После подтверждения ДокПоток формирует файл проводок Excel или CSV для загрузки в 1С или ERP. Прямая интеграция через REST – следующий этап.</p></div>
 <div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Что, если модель ошибется?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">Сомнительные поля подсвечиваются, а проводки формируются только после проверки специалистом. Его правки идут в дообучение модели.</p></div>
-<div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Придется менять правила учета?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">Нет. Мы настраиваем разноску под ваши правила: по массе, объему, количеству или стоимости товара.</p></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Придется менять правила учета?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">Нет. Мы настраиваем распределение затрат под ваши правила: по массе, объему, количеству или стоимости товара.</p></div>
 <div style="display: flex; flex-direction: column; gap: 8px"><h3 style="margin: 0; font-size: 18px; font-weight: 600">Это замена сотрудникам?</h3><p style="margin: 0; color: #3E4B5A; font-size: 16px">Нет. Специалист перестает переносить данные руками и проверяет готовый результат, поэтому успевает обработать больше счетов.</p></div>
 </div>
 </div>
@@ -351,7 +351,8 @@ input[type=range]{width:100%;accent-color:#D9480F;height:32px}
 <div class="dp-wrap" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <h2 class="dp-h2">Обсудим пилот на ваших счетах</h2>
-<p style="margin: 0; color: #C3CED9; font-size: 18px">Оставьте контакты. Свяжемся в течение рабочего дня, уточним объем документов и правила разноски.</p>
+<p style="margin: 0; color: #C3CED9; font-size: 18px">Оставьте телефон или почту — пришлём ссылку на демостенд и договоримся о пилоте на ваших счетах.</p>
+<p style="margin: 0; color: #C3CED9; font-size: 16px; padding-top: 8px">Достаточно имени и телефона — остальное уточним уже в разговоре.</p>
 <p style="margin: 0; color: #C3CED9; font-size: 16px; padding-top: 8px">Или напишите нам: <span class="dp-mono" style="color: #FFFFFF; user-select: all">fedianina.ea@phystech.edu</span></p>
 </div>
 <div id="lead-form-slot" style="flex: 1 1 420px; min-width: 0; background: #FFFFFF; color: #0E1A2B; border-radius: 10px; padding: 12px; box-sizing: border-box">
